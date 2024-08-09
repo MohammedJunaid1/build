@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import logo from "./logo.webp"
+import logo from "../../public/1.png"
 
 
 export default function Chat() {
