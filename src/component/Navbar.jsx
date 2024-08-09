@@ -1,8 +1,10 @@
-import React from "react";
+import { useEffect, useState } from "react";
+
 
 export default function Navbar() {
+   
     return (
-        <nav className="bg-neutral-800 p-4 fixed w-full">
+        <nav className={` bg-neutral-800 p-4 fixed w-[84%]  `}>
             <div className="container mx-auto flex justify-between items-center">
                 <div className="text-white text-xl font-bold">
                     ChatAI
