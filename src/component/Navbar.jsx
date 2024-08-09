@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Navbar() {
     return (
-        <nav className="bg-neutral-800 p-4">
+        <nav className="bg-neutral-800 p-4 fixed w-full">
             <div className="container mx-auto flex justify-between items-center">
                 <div className="text-white text-xl font-bold">
                     ChatAI
