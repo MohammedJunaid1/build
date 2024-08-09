@@ -8,7 +8,7 @@ import SideBar from "./SideBar";
 export default function Layout() {
  
   return (
-    <div className="grid grid-cols-12 h-screen overflow-y-hidden" >
+    <div className="grid grid-cols-12 h-screen " >
         <div className="col-span-2 h-full">
                 <SideBar />
         </div>

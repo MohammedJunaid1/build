@@ -36,8 +36,10 @@ export default function Chat() {
 
 
   return (
-    <div ref={chatRef} className="bg-neutral-800 flex-1 flex justify-center overflow-y-scroll py-10  ">
-        <div  className="w-[60%]  scroll-smooth h-screen pb-20">
+    <div className="h-auto ">
+
+    <div ref={chatRef} className="bg-neutral-800 flex-1 flex justify-center overflow-y-scroll ">
+        <div  className="w-[60%]  scroll-smooth h-screen ">
               {chats.map((chat,index)=>
                  <div  className="flex flex-col p-5 text-gray-300" key={index+chat.content} >
                    <p className={`${chat.type === "Query"?"px-3 py-2 mb-1 borde self-end bg-neutral-700 border-neutral-700  rounded-3xl w-[60%]":"text-left mb-20 self-start w-[90%] flex gap-3"}`} >
@@ -47,6 +49,9 @@ export default function Chat() {
                  </div>
               )}   
        </div>
+      
     </div>
+    
+              </div>
   )
 }
