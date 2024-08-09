@@ -28,7 +28,7 @@ export default function SideBar() {
   };
 
   return (
-    <div className="bg-[#171717] h-full  relative  ">
+    <div className="bg-[#171717] h-full  fixed w-[16.7%]  ">
       <div className="flex justify-center gap-[150px] pt-2">
         <PiSidebarSimpleBold className="text-[#c7c1c1] text-3xl" />
         <FaNotesMedical className="text-[#c7c1c1] text-3xl " />
