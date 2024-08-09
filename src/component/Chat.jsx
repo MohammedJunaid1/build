@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import logo from "../../public/1.png"
+import logo from "./logo.webp"
 
 
 export default function Chat() {
@@ -36,10 +36,8 @@ export default function Chat() {
 
 
   return (
-    <div className="h-auto ">
-
-    <div ref={chatRef} className="bg-neutral-800 flex-1 flex justify-center overflow-y-scroll ">
-        <div  className="w-[60%]  scroll-smooth h-screen ">
+    <div className="bg-neutral-800 flex-1 flex justify-center p-10 ">
+        <div ref={chatRef} className="w-[60%] h-auto scroll-smooth py-10">
               {chats.map((chat,index)=>
                  <div  className="flex flex-col p-5 text-gray-300" key={index+chat.content} >
                    <p className={`${chat.type === "Query"?"px-3 py-2 mb-1 borde self-end bg-neutral-700 border-neutral-700  rounded-3xl w-[60%]":"text-left mb-20 self-start w-[90%] flex gap-3"}`} >
@@ -49,9 +47,6 @@ export default function Chat() {
                  </div>
               )}   
        </div>
-      
     </div>
-    
-              </div>
   )
 }
