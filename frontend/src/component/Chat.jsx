@@ -29,15 +29,12 @@ export default function Chat() {
     { type: 'Query', content: 'Who painted the Mona Lisa?' },
     { type: 'Response', content: 'The Mona Lisa was painted by Leonardo da Vinci.' }
   ])
-  const chatRef = useRef(null)
-  useEffect(()=>{
-    chatRef.current.scrollTop = chatRef.current.scrollHeight;
-  },[])
+ 
 
 
   return (
     <div className="bg-neutral-800 flex-1 flex justify-center p-10 ">
-        <div ref={chatRef} className="w-[60%] h-auto scroll-smooth py-10">
+        <div className="w-[60%] h-auto scroll-smooth py-10">
               {chats.map((chat,index)=>
                  <div  className="flex flex-col p-5 text-gray-300" key={index+chat.content} >
                    <p className={`${chat.type === "Query"?"px-3 py-2 mb-1 borde self-end bg-neutral-700 border-neutral-700  rounded-3xl w-[60%]":"text-left mb-20 self-start w-[90%] flex gap-3"}`} >
