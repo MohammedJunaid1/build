@@ -28,7 +28,8 @@ export default function Input() {
         },
       })
     
-      // chatObj.response = 
+      console.log(answer.answer)
+  
       setChat([...chat,{query:inputValue,response:answer.answer.split("```")[1]}])
      
     
@@ -42,12 +43,12 @@ export default function Input() {
   }
   return (
     <div onKeyDown={handleKeyDown} className="bg-neutral-800 fixed bottom-0 w-full   ">
-      <div className=" w-content flex flex-col place-items-center ">
-        <div className="flex gap-2 p-2 rounded-3xl px-4 justify-center bg-neutral-700 w-[40%] relative left-[-150px]">
+      <div className=" w-content flex flex-col gap-2 place-items-center pt-3 ">
+        <div className="flex justify-between py-1 text-xs rounded-3xl   bg-neutral-700 w-1/2 pl-4 pr-1 relative ">
          <input onChange={(e)=>setInputValue(e.target.value)} value={inputValue} placeholder="Message ChatAI"  className="  flex-1  bg-neutral-700  text-gray-300 focus:outline-none" type="text" />
-          <button  onClick={chatSubmitHandler} className="text-neutral-700 rounded-full w-7 h-7 text-lg bg-gray-300">&uarr;</button>
+          <button  onClick={chatSubmitHandler} className="text-neutral-700 rounded-full w-7 h-7 text-lg bg-gray-300 hover:bg-gray-400">&uarr;</button>
         </div>
-        <p className="text-gray-300 text-xs text-center relative left-[-150px]">ChatAI can make mistakes. Check important info.</p>
+        <p className="text-gray-300 text-xs text-center relative">ChatAI can make mistakes. Check important info.</p>
       </div>
     </div>
   )

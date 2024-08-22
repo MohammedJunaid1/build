@@ -14,11 +14,11 @@ export default function Layout() {
   },[chat])
  
   return (
-    <div className="grid grid-cols-12 h-screen " >
-        <div className="col-span-2 h-full">
+    <div className="w-full h-screen" >
+        {/* <div className="col-span-2 h-full">
                 <SideBar />
-        </div>
-        <div  className="col-start-3 col-end-13 h-full  ">
+        </div> */}
+        <div >
                 <Navbar  />
                 <Chat />
                 <Input />

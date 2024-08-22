@@ -16,13 +16,15 @@ route.post("/",async (req,res:Response)=>{
                     - Replace class attributes with className.
                     - Make sure all attributes are properly quoted.
                     - Ensure the structure is semantically correct for use in a React component.
+                    
                     Here’s the content to convert:
+
 
                     ${chat.choices[0]?.message?.content}
 
                     Please ensure the generated HTML is ready to be copied directly into a React component without further modification.`)
 
-        console.log(chat2.choices[0]?.message?.content)
+       console.log(chat.choices[0]?.message?.content)
         res.json({answer:chat2.choices[0]?.message?.content})
     
     } catch (error) {
